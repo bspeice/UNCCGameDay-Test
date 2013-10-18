@@ -36,7 +36,7 @@ public class RESTTest extends AndroidTestCase {
 	public void testFetchLots() {
 		RegistrationClient rc = new RegistrationClient(this.mContext);
 		List<ParkingLot> lots = rc.listLots();
-		assertFalse((lots.size() == 0));
+		assertTrue((lots.size() > 0));
 	}
 
 }
