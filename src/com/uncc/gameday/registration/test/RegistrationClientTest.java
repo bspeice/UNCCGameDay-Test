@@ -40,7 +40,7 @@ public class RegistrationClientTest extends AndroidTestCase {
 		assertTrue((lots.size() > 0));
 	}
 	
-	public void testListLot() {
+	public void testFetchLot() {
 		RegistrationClient rc = new RegistrationClient(this.mContext);
 		ParkingLot lot = rc.listLot(ParkingChoices.BLUE);
 		assertTrue(lot.getLocation().getValue() == ParkingChoices.BLUE.getValue());
