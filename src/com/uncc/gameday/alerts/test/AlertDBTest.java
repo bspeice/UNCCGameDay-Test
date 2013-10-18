@@ -1,5 +1,6 @@
 package com.uncc.gameday.alerts.test;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class AlertDBTest extends AndroidTestCase {
 		Date d = new Date();
 		Alert a1 = new Alert(d, "testPersistMultiple", false);
 		Alert a2 = new Alert(d, "testPersistMultiple", false);
-		List l = new List<Alert>();
+		List<Alert> l = new ArrayList<Alert>();
 		l.add(a1);
 		l.add(a2);
 		
