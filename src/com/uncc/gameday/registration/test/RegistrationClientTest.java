@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.List;
 
 import com.uncc.gameday.R;
+import com.uncc.gameday.registration.ParkingChoices;
 import com.uncc.gameday.registration.ParkingLot;
 import com.uncc.gameday.registration.RegistrationClient;
 
@@ -37,6 +38,12 @@ public class RegistrationClientTest extends AndroidTestCase {
 		RegistrationClient rc = new RegistrationClient(this.mContext);
 		List<ParkingLot> lots = rc.listLots();
 		assertTrue((lots.size() > 0));
+	}
+	
+	public void testListLot() {
+		RegistrationClient rc = new RegistrationClient(this.mContext);
+		ParkingLot lot = rc.listLot(ParkingChoices.BLUE);
+		assertTrue(lot.getLocation().getValue() == ParkingChoices.BLUE.getValue());
 	}
 
 }
