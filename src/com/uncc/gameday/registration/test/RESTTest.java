@@ -27,7 +27,7 @@ public class RESTTest extends AndroidTestCase {
 		if (!host.isReachable(5000))
 			fail("Could not contact Gameday server!");
 		*/
-		HttpURLConnection connection = (HttpURLConnection) new URL("http", mContext.getString(R.string.server_hostname), "gameday")
+		HttpURLConnection connection = (HttpURLConnection) new URL("http", mContext.getString(R.string.server_hostname), "")
 			.openConnection();
 		if (connection.getResponseCode() != connection.HTTP_OK)
 			fail("Could not connect to GameDay! Response code: " + connection.getResponseCode());
