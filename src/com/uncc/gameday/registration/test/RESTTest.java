@@ -32,5 +32,11 @@ public class RESTTest extends AndroidTestCase {
 		if (connection.getResponseCode() != connection.HTTP_OK)
 			fail("Could not connect to GameDay! Response code: " + connection.getResponseCode());
 	}
+	
+	public void testFetchLots() {
+		RegistrationClient rc = new RegistrationClient(this.mContext);
+		List<ParkingLot> lots = rc.listLots();
+		assertFalse((lots.size() == 0));
+	}
 
 }
