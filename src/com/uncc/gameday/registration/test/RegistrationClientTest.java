@@ -13,7 +13,7 @@ import android.test.AndroidTestCase;
 
 /* Tests the REST functionality */
 
-public class RESTTest extends AndroidTestCase {
+public class RegistrationClientTest extends AndroidTestCase {
 	
 	public void setUp() throws Exception {
 		super.setUp();
