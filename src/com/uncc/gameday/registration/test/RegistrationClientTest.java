@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.List;
 
 import android.test.AndroidTestCase;
-import android.util.Log;
 
 import com.uncc.gameday.R;
 import com.uncc.gameday.registration.ParkingChoices;
