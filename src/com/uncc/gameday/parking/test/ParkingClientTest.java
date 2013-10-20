@@ -70,7 +70,8 @@ public class ParkingClientTest extends AndroidTestCase{
 		
 		// While the lot should be full (100%) the unit test POST goes too fast
 		// for Retrofit to keep up (or server, tbh not sure which)
-		// As long as the pct > 0, some of our POSTs have made it.
+		// We are making an assumption here that in production we won't have such
+		// rapid-fire usage.
 		assertTrue((lot.getFilledPct() > 0));
 	}
 }
