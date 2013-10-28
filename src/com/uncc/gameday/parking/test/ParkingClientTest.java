@@ -45,6 +45,12 @@ public class ParkingClientTest extends AndroidTestCase{
 		assertTrue(lot.getLocation().getValue() == ParkingChoice.BLUE.getValue());
 	}
 	
+	public void testFetchLocation() {
+		ParkingClient pc = new ParkingClient(this.mContext);
+		ParkingLot l = pc.listLot(ParkingChoice.GOLD);
+		assertTrue((l.getCoordinate().getLatitude() != 0));
+	}
+	
 	public void testRateLot() throws InterruptedException {
 		ParkingClient pc = new ParkingClient(this.mContext);
 		ParkingChoice choice = ParkingChoice.BLUE;
