@@ -7,7 +7,7 @@ import java.util.List;
 import android.test.AndroidTestCase;
 
 import com.uncc.gameday.R;
-import com.uncc.gameday.parking.ParkingChoices;
+import com.uncc.gameday.parking.ParkingChoice;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.ParkingRating;
 import com.uncc.gameday.parking.RatingChoices;

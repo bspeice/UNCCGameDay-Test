@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.List;
 
 import com.uncc.gameday.R;
-import com.uncc.gameday.parking.ParkingChoices;
+import com.uncc.gameday.parking.ParkingChoice;
 import com.uncc.gameday.parking.ParkingLot;
 import com.uncc.gameday.parking.ParkingRating;
 import com.uncc.gameday.parking.RatingChoices;
@@ -41,13 +41,13 @@ public class ParkingClientTest extends AndroidTestCase{
 	
 	public void testFetchLot() {
 		ParkingClient pc = new ParkingClient(this.mContext);
-		ParkingLot lot = pc.listLot(ParkingChoices.BLUE);
-		assertTrue(lot.getLocation().getValue() == ParkingChoices.BLUE.getValue());
+		ParkingLot lot = pc.listLot(ParkingChoice.BLUE);
+		assertTrue(lot.getLocation().getValue() == ParkingChoice.BLUE.getValue());
 	}
 	
 	public void testRateLot() throws InterruptedException {
 		ParkingClient pc = new ParkingClient(this.mContext);
-		ParkingChoices choice = ParkingChoices.BLUE;
+		ParkingChoice choice = ParkingChoice.BLUE;
 		
 		// To test and make sure this works:
 		// Rate a lot empty 10 times to flush out any other ratings,
