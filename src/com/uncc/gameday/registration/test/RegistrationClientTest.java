@@ -7,17 +7,20 @@ import java.util.List;
 import android.test.AndroidTestCase;
 
 import com.uncc.gameday.R;
-import com.uncc.gameday.parking.ParkingChoice;
-import com.uncc.gameday.parking.ParkingLot;
-import com.uncc.gameday.parking.ParkingRating;
-import com.uncc.gameday.parking.RatingChoices;
 import com.uncc.gameday.registration.Attendee;
 import com.uncc.gameday.registration.RegistrationClient;
 
+// TODO: Auto-generated Javadoc
 /* Tests the REST functionality */
 
+/**
+ * The Class RegistrationClientTest.
+ */
 public class RegistrationClientTest extends AndroidTestCase {
 	
+	/* (non-Javadoc)
+	 * @see android.test.AndroidTestCase#setUp()
+	 */
 	public void setUp() throws Exception {
 		super.setUp();
 		
@@ -36,6 +39,9 @@ public class RegistrationClientTest extends AndroidTestCase {
 			fail("Could not connect to GameDay! Response code: " + connection.getResponseCode());
 	}
 	
+	/**
+	 * Test registration.
+	 */
 	public void testRegistration() {
 		// Register a new user, and make sure that they can be retrieved correctly
 		Attendee a = new Attendee();
@@ -52,6 +58,9 @@ public class RegistrationClientTest extends AndroidTestCase {
 		assertTrue((r.getId() != 0));
 	}
 	
+	/**
+	 * Test list users.
+	 */
 	public void testListUsers() {
 		// Test listing all users
 		RegistrationClient rc = new RegistrationClient(this.mContext);

@@ -13,8 +13,15 @@ import com.uncc.gameday.parking.ParkingClient;
 
 import android.test.AndroidTestCase;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ParkingClientTest.
+ */
 public class ParkingClientTest extends AndroidTestCase{
 
+	/* (non-Javadoc)
+	 * @see android.test.AndroidTestCase#setUp()
+	 */
 	public void setUp() throws Exception {
 		super.setUp();
 		
@@ -33,24 +40,38 @@ public class ParkingClientTest extends AndroidTestCase{
 			fail("Could not connect to GameDay! Response code: " + connection.getResponseCode());
 	}
 	
+	/**
+	 * Test fetch lots.
+	 */
 	public void testFetchLots() {
 		ParkingClient pc = new ParkingClient(this.mContext);
 		List<ParkingLot> lots = pc.listLots();
 		assertTrue((lots.size() > 0));
 	}
 	
+	/**
+	 * Test fetch lot.
+	 */
 	public void testFetchLot() {
 		ParkingClient pc = new ParkingClient(this.mContext);
 		ParkingLot lot = pc.listLot(ParkingChoice.BLUE);
 		assertTrue(lot.getLocation().getValue() == ParkingChoice.BLUE.getValue());
 	}
 	
+	/**
+	 * Test fetch location.
+	 */
 	public void testFetchLocation() {
 		ParkingClient pc = new ParkingClient(this.mContext);
 		ParkingLot l = pc.listLot(ParkingChoice.GOLD);
 		assertTrue((l.getCoordinate().getLatitude() != 0));
 	}
 	
+	/**
+	 * Test rate lot.
+	 *
+	 * @throws InterruptedException the interrupted exception
+	 */
 	public void testRateLot() throws InterruptedException {
 		ParkingClient pc = new ParkingClient(this.mContext);
 		ParkingChoice choice = ParkingChoice.BLUE;

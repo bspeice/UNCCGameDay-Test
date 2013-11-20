@@ -11,8 +11,15 @@ import android.test.AndroidTestCase;
 import com.uncc.gameday.R;
 import com.uncc.gameday.twitter.TwitterClient;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TwitterClientTest.
+ */
 public class TwitterClientTest extends AndroidTestCase {
 	
+	/**
+	 * Test twitter.
+	 */
 	public void testTwitter(){
 		// Test the twitter4j logic
 		String handle = this.mContext.getString(R.string.gameday_handle);
