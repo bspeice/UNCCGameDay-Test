@@ -59,15 +59,6 @@ public class ParkingClientTest extends AndroidTestCase{
 	}
 	
 	/**
-	 * Test fetch location.
-	 */
-	public void testFetchLocation() {
-		ParkingClient pc = new ParkingClient(this.mContext);
-		ParkingLot l = pc.listLot(ParkingChoice.GOLD);
-		assertTrue((l.getCoordinate().getLatitude() != 0));
-	}
-	
-	/**
 	 * Test rate lot.
 	 *
 	 * @throws InterruptedException the interrupted exception
